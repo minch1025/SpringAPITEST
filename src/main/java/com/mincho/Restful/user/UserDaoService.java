@@ -16,9 +16,9 @@ public class UserDaoService {
     private static List<User> users = new ArrayList<>();
     //initializing
     static{
-        users.add(new User(1,"minch",new Date()));
-        users.add(new User(2,"sangsun",new Date()));
-        users.add(new User(3,"sunny",new Date()));
+        users.add(new User(1,"minch",new Date(),"pass1","731025-2020011"));
+        users.add(new User(2,"sangsun",new Date(),"pass2","831025-2020011"));
+        users.add(new User(3,"sunny",new Date(),"pass3","931025-2020011"));
     }
 
     //get all list
