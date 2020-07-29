@@ -35,11 +35,11 @@ public class UserController {
             if(user == null){
                 throw new UserNotFoundException(String.format("ID[%s] not found",id));
             }
+
             //Insert Hateos work ( send data + detailed about Link tag)
         EntityModel<User> model = new EntityModel<>(user);
             //Link on and add method on Current class
         WebMvcLinkBuilder linkTo = linkTo(methodOn(this.getClass()).retrieveAllUsers());
-
         model.add(linkTo.withRel("all-users"));
 
         return model;
