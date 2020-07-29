@@ -15,7 +15,7 @@ import java.util.Date;
 @NoArgsConstructor
 //@JsonIgnoreProperties((value={"password"})
 
-@JsonFilter("UserInfo")
+//@JsonFilter("UserInfo")
 public class User {
     private Integer id;
     @Size(min=2 , message= "Name은 2글자 부탁드립니다")

@@ -1,9 +1,13 @@
 package com.mincho.Restful.user;
 //hibernate = JAVA object <=> DB Entity help to application API framework
 
+import com.fasterxml.jackson.databind.ser.FilterProvider;
+import com.fasterxml.jackson.databind.ser.impl.SimpleBeanPropertyFilter;
+import com.fasterxml.jackson.databind.ser.impl.SimpleFilterProvider;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.converter.json.MappingJacksonValue;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
@@ -44,6 +48,10 @@ public class UserController {
 
         return model;
     }
+
+
+
+
     @PostMapping("/users") //@RequestBody transfer from parameter.
     public ResponseEntity<User> createUser(@Valid @RequestBody User user){
        User savedUser =service.save(user);
